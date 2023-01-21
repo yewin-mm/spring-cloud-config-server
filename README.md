@@ -101,7 +101,7 @@ Click below links.
 ### 🔑 Prerequisites
 Prerequisites can be found here, [Spring Boot Application Instruction](https://github.com/yewin-mm/spring-boot-app-instruction). <br>
 You need to clone [Config Files Store](https://github.com/yewin-mm/spring-cloud-config-files-storage) for getting and managing properties files <br>
-and [Spring Cloud Config Sample Microservice a](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-a) for sample client a and [Spring Cloud Config Sample Microservice B](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-b) for sample client b.
+and [Spring Cloud Config Sample Microservice a](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-a) for sample client a and [Spring Cloud Config Sample Microservice b](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-b) for sample client b.
 
 
 <a name="instruction"></a>

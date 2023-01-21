@@ -38,7 +38,7 @@
 * Nowadays, We used spring cloud config for centralization for all configures at one place over `Git` call config repository (properties or yml files store). 
 * Also, we don't need to restart our application again if we changed something in our `application.properties` files or if we want to change something in that config file.
 * So, Spring Cloud Config is used for centralized configuration and used to change config at runtime collaborate with Spring boot Actuator build in `Refresh` api. 
-* This project is communicate with [Spring Cloud Config Sample Microservice A](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-a) as for config sample client service <br> and 
+* This project is communicate with [Spring Cloud Config Sample Microservice A](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-a) as for config sample client service and 
 [Spring Cloud Config Sample Microservice B](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-b) as for another config sample client service <br>
 and communicate with [Config Files Storage](https://github.com/yewin-mm/spring-cloud-config-files-storage) as for config files storage repository. 
 
@@ -49,6 +49,11 @@ and communicate with [Config Files Storage](https://github.com/yewin-mm/spring-c
 - [Getting Started](#getting-started)
     - [Before you begin](#before-you-begin)
     - [Clone Project](#clone-project)
+    - [Prerequisites](#prerequisites)
+    - [Instruction](#instruction)
+      -  [Setup Config file store and Run Services](#setup-and-run-services)
+      -  [Testing](#testing)
+        -  [Testing Config Server](#testing-config-server)
 - [Contact Me](#contact)
 - [Contributing](#Contributing)
 
@@ -91,6 +96,51 @@ Click below links.
    ```sh
    git clone https://github.com/yewin-mm/spring-cloud-config-server.git
    ```
+
+<a name="prerequisites"></a>
+### 🔑 Prerequisites
+Prerequisites can be found here, [Spring Boot Application Instruction](https://github.com/yewin-mm/spring-boot-app-instruction). <br>
+You need to clone [Config Files Store](https://github.com/yewin-mm/spring-cloud-config-files-storage) for getting and managing properties files <br>
+and [Spring Cloud Config Sample Microservice a](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-a) for sample client a and [Spring Cloud Config Sample Microservice B](https://github.com/yewin-mm/spring-cloud-config-sample-microservice-b) for sample client b.
+
+
+<a name="instruction"></a>
+### 📝 Instruction
+<a name="setup-and-run-services"></a>
+#### Setup Config file store and Run Services
+* Clone [Config Files Store](https://github.com/yewin-mm/spring-cloud-config-files-storage).
+  * Firstly, you need to do that config files store folder as git repository.
+  * Go to your cloned config file repo folder(directory) with CMD or Terminal
+  * Type `git init` and type `git add .` and type `git commit -m "first commit for config"`.
+    * (`git init` command should type only `one time` for this folder).
+* Clone and run this application.
+
+<a name="testing"></a>
+#### Testing
+* Import `cloud config.postman_collection.json` file under project directory (see that file in project directory) into your installed Postman application.
+  * Click in your Postman (top left corner) import -> file -> upload files -> {choose that json file} and open/import.
+  * After that, you can see the folder which you import from file in your Postman.
+  * Open your imported `cloud-config` folder in postman and inside this folder, you will see total of 3 folders,
+
+
+<a name="testing-config-server"></a>
+##### Testing Config Server
+* Now, you can test Config Server by calling api from Postman.
+* Please note that your Config File Store directory is already git project as above [Setup Config file store](#setup-and-run-services) step.
+* Open `config-server` folder
+  * Open `(build-in api) (service a) check properties (default profile)` api, click `send` button, you can see Service A default profile config values.
+  * And this values is from `microservice-a.properties` file and which file under your cloned config file store directory.
+  * You can also call for `service b` sample APIs.
+  * You can also check for another check properties APIs `as per application profile` and I already dropped those APIs in that folder.
+  * You can also check `encrypt` and `decrypt` APIs by adding test value in encrypt api, and you will get encrypted value, <br>
+    and you can add that encrypted value in decrypt api and you will get decrypted value.
+  * Those `encrypt` and `decrypt` APIs is just for testing encryption which will use in our config file store and config server as for security. <br>
+    Because someone may get your config files, and he can easily get your secret credentials like server credentials.
+  * Because in real world applications, you need to push your config file store in GitHub or Bitbucket.
+  * That approach is because your real world running application in cloud server can't connect to your local config directory and so, you need to push your config repo to GitHub or Bitbucket.
+  * So, this config file store directory is just for testing in local laptop and even if you push your config file store in GitHub as repository,
+    your config server can fetch that config file directory well and I already dropped that sample cloud config file url in `application.properties` file of  config server too.
+
 
 <a name="contact"></a>
 ## ✉️ Contact

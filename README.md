@@ -115,7 +115,7 @@ and [Spring Cloud Config Sample Microservice a](https://github.com/yewin-mm/spri
   * Type `git init` and type `git add .` and type `git commit -m "first commit for config"`.
     * (`git init` command should type only `one time` for this folder).
 * Clone and run this config server application.
-* If you did manual created config store folder and you want to connect this server to your config store folder, you need to push your sotre folder to your github and you need to change `spring.cloud.config.server.git.uri` in `application.properties` file in this config server application.
+* If you did manual created config store folder and you want to connect this server to your config store folder, you need to push your config store folder to your Github or other git based code store repo like Bitbucket and you need to change `spring.cloud.config.server.git.uri` in `application.properties` file in this config server application.
 
 <a name="testing"></a>
 #### Testing

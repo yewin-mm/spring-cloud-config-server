@@ -129,7 +129,7 @@ and [Spring Cloud Config Sample Microservice a](https://github.com/yewin-mm/spri
 <a name="testing-config-server"></a>
 ##### Testing Config Server
 * Now, you can test Config Server by calling api from Postman.
-* Please note that your Config File Store directory is already git project as above [Setup Config file store](#setup-and-run-services) step.
+* Please note that your Config File Store directory need to be already git project as above [Setup Config file store](#setup-and-run-services) step.
 * Open `config-server` folder
   * Open `(build-in api) (service a) check properties (default profile)` api, click `send` button, you can see Service A default profile config values.
   * And this values is from `microservice-a.properties` file and which file under your cloned config file store directory.

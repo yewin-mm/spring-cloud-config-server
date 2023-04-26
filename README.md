@@ -109,7 +109,7 @@ and [Spring Cloud Config Sample Microservice a](https://github.com/yewin-mm/spri
 <a name="setup-and-run-services"></a>
 #### Setup Config file store and Run Services
 * Clone [Config Files Store](https://github.com/yewin-mm/spring-cloud-config-files-storage) or create folder with properties files.
-  * If you manual created folder with creating some properties files like above config file store,
+  * If you do manual created folder with creating some properties files like above config file store,
   * Firstly, you need to do that config files store folder as git repository.
   * Go to your created config file repo folder(directory) with CMD or Terminal
   * Type `git init` and type `git add .` and type `git commit -m "first commit for config"` and connect with your git by `git remote {url}` and type `git push -u origin master`.

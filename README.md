@@ -112,11 +112,19 @@ and [Spring Cloud Config Sample Microservice a](https://github.com/yewin-mm/spri
   * If you do manual created folder with creating some properties files like above config file store,
   * Firstly, you need to do that config files store folder as git repository.
   * Go to your created config file repo folder(directory) with CMD or Terminal
-  * Type `git init` and type `git add .` and type `git commit -m "first commit for config"` and connect with your git by `git remote {url}` and type `git push -u origin master`.
+  * Type `git init` and type `git add .` and type `git commit -m "first commit for config"`
     * (`git init` command should type only `one time` for this folder).
-* Clone and run this config server application.
-* If you did manual created config store folder and you want to connect this server to your config store folder, you need to push your config store folder to your Github or other git based code store repo like Bitbucket and you need to change your store url in `spring.cloud.config.server.git.uri` field inside `application.properties` file in this config server application.
-* You can even use my config store url (above Config File Store repo), but if you want to change field value, you can't do that because you used my config repo. So, it's better creating new folder and pushing into your Github.
+  * If you want to push to your github, connect with your git by `git remote {url}` and type `git push -u origin master`.
+    
+
+* There are two ways, 
+  * You can use local config file repo in this application properties file which I comment out. (just change your config store folder path)
+  * You can use you my config store repo. (for that case, no need to change url in this application properties) <br>
+  But if you want to change some field values, you can't do that because you used my config repo. So, it's better creating new folder and using that in this application properties.
+
+* You can push your config store folder to your Github or other git based code store repo like Bitbucket and if so, you need to change your store url in `spring.cloud.config.server.git.uri` field inside `application.properties` file in this config server application.
+
+* After that, Clone and run this config server application.
 
 <a name="testing"></a>
 #### Testing
